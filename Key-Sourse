@@ -36,7 +36,11 @@ function reload() {
 })();
 
 
-КНОПКИ 
+
+
+
+
+
 
 
 (function () {
@@ -75,6 +79,9 @@ if (window.appready) start();
     }
 
 })();
+
+
+
 
 
 

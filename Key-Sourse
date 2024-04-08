@@ -80,7 +80,6 @@ if (window.appready) start();
 
 
 
-
 (function () {
 	'use strict';
 

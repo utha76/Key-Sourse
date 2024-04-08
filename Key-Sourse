@@ -39,10 +39,6 @@ function reload() {
 
 
 
-
-
-
-
 (function () {
     'use strict';
 Lampa.Platform.tv(); 
@@ -79,9 +75,6 @@ if (window.appready) start();
     }
 
 })();
-
-
-
 
 
 

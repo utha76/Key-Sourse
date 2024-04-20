@@ -38,7 +38,7 @@ function reload() {
 
 
 
-
+/* ============== KEY ================= */
 (function () {
     'use strict';
 Lampa.Platform.tv(); 
@@ -77,11 +77,7 @@ if (window.appready) start();
 })();
 
 
-
-
-
-
-
+/* ============= SOURSE ================ */
 (function() {
 	'use strict';
    Lampa.Platform.tv();

@@ -1,6 +1,6 @@
 /* =========== СТАЛЬ КНОПОК =========== */
 var style = document.createElement('style');
-style.innerHTML = '.full-start__footer { position: relative; top: -30; }';
+style.innerHTML = '.full-start__footer { position: relative; top: -10; }';
 document.head.appendChild(style);
 
 /* =========== KEY =========== */

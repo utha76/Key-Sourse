@@ -4,7 +4,6 @@ style.innerHTML = '.full-start__footer { position: relative; top: -30; }';
 document.head.appendChild(style);
 
 /* =========== KEY =========== */
-(function () {
     'use strict';
     Lampa.Platform.tv();
 

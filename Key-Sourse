@@ -1,11 +1,21 @@
-/* ====== ЗАРМЕР КНОПОК ====== */
+(function () {
+    'use strict';
+    Lampa.Platform.tv();
+
+
+/* ====== РАЗМЕР КНОПОК ====== */
 var style = document.createElement('style');
 style.innerHTML = '.full-start__footer { position: relative; top: -30; }';
 document.head.appendChild(style);
 
 
-/* ===== ИКОНКИ =====*/
 
+/* ===== ИСТОЧНИКИ ===== */
+function _0x2012(_0x1a7ba2,_0x51bf3b){var _0x116bea=_0x116b();return _0x2012=function(_0x201212,_0xc57eb2){_0x201212=_0x201212-0xa3;var _0x1a0163=_0x116bea[_0x201212];return _0x1a0163;},_0x2012(_0x1a7ba2,_0x51bf3b);}var _0x4c0809=_0x2012;function _0x116b(){var _0x488af7=['11122536vrHndb','1NpJSiZ','2421740WeVgyv','2846385AUkvqZ','Utils','3869865AgZGJE','putScriptAsync','7RfLPop','16mtKuLM','10540431vePzFf','148OfsdMp','https://lampa32.github.io/source.js','1547318kjFaYY','112548tloHrW'];_0x116b=function(){return _0x488af7;};return _0x116b();}(function(_0xf40029,_0x1ea11c){var _0x3288aa=_0x2012,_0x401f36=_0xf40029();while(!![]){try{var _0xf55068=-parseInt(_0x3288aa(0xa9))/0x1*(parseInt(_0x3288aa(0xa6))/0x2)+-parseInt(_0x3288aa(0xa7))/0x3*(-parseInt(_0x3288aa(0xa4))/0x4)+parseInt(_0x3288aa(0xab))/0x5+-parseInt(_0x3288aa(0xa8))/0x6*(-parseInt(_0x3288aa(0xaf))/0x7)+-parseInt(_0x3288aa(0xb0))/0x8*(parseInt(_0x3288aa(0xad))/0x9)+-parseInt(_0x3288aa(0xaa))/0xa+-parseInt(_0x3288aa(0xa3))/0xb;if(_0xf55068===_0x1ea11c)break;else _0x401f36['push'](_0x401f36['shift']());}catch(_0x2169d2){_0x401f36['push'](_0x401f36['shift']());}}}(_0x116b,0xee8cd),Lampa[_0x4c0809(0xac)][_0x4c0809(0xae)]([_0x4c0809(0xa5)],function(){}));
+
+
+
+/* ===== ИКОНКИ =====*/
 function button() {
 Lampa.Listener.follow('full', function(e) {
   if (e.type == 'complite') {
@@ -46,49 +56,33 @@ Lampa.Listener.follow('full', function(e) {
 });
 }
 
-
-/* ============= KEY ============= */
-(function () {
-    'use strict';
-    Lampa.Platform.tv();
-
-Lampa.Listener.follow('full', function(e) {
-  if (e.type == 'complite') {
-    setTimeout(function() {
-      $('.view--online').each(function() {
-        var $torrentButton = $(this);
-        var $parent = $torrentButton.parent();
-        var $firstChild = $parent.children().first();
-
-        if (!$torrentButton.is($firstChild)) {
-          $torrentButton.prependTo($parent);
-        }
-      });
-      $('.view--online_mod').each(function() {
-        var $onmodButton = $(this);
-        var $parent = $onmodButton.parent();
-        var $secondChild = $parent.children().eq(1); // Выбираем второй элемент
-
-        if (!$onmodButton.is($secondChild)) {
-          $onmodButton.insertBefore($secondChild); // Вставляем $onmodButton перед вторым элементом
-        }
-      });
-      $('.view--torrent').each(function() {
-        var $torrentButton = $(this);
-        var $parent = $torrentButton.parent();
-        var $thirdChild = $parent.children().eq(2); // Выбираем третий элемент
-
-        if (!$torrentButton.is($thirdChild)) {
-          $torrentButton.insertAfter($parent.children().eq(1)); // Вставляем $torrentButton после второго элемента
-        }
-      });
-Lampa.Controller.toggle('full_start');
-    }, 10);
-  }
-});
+   /* ===== ПЕРЕЗАГРУЗКА ===== */
+var icon_server_reload = '<svg fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="0.4800000000000001"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M4,12a1,1,0,0,1-2,0A9.983,9.983,0,0,1,18.242,4.206V2.758a1,1,0,1,1,2,0v4a1,1,0,0,1-1,1h-4a1,1,0,0,1,0-2h1.743A7.986,7.986,0,0,0,4,12Zm17-1a1,1,0,0,0-1,1A7.986,7.986,0,0,1,7.015,18.242H8.757a1,1,0,1,0,0-2h-4a1,1,0,0,0-1,1v4a1,1,0,0,0,2,0V19.794A9.984,9.984,0,0,0,22,12,1,1,0,0,0,21,11Z" fill="currentColor"></path></g></svg></div>';
+		
+function reload() {
 	
+	var reloadSVG = icon_server_reload
+	var reloadBUTT = '<div id="RELOAD" class="head__action selector redirect-screen">' + reloadSVG + '</div>';
+	
+	$('#app > div.head > div > div.head__actions').append(reloadBUTT);
+	//$('#RELOAD').insertAfter('div[class="head__action selector open--settings"]');
+	
+	$('#RELOAD').on('hover:enter hover:click hover:touch', function() {
+		location.reload();
+	});
+  } 
+
+if (window.appready) {reload(); button();}
+    else {
+        Lampa.Listener.follow('app', function(e) {
+            // если приложение прогрузилось
+            if (e.type == 'ready') {
+                reload();
+                button();
+            }
+        });
+    }
+
+
 })();
-
-
-
 

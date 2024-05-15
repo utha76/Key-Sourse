@@ -1,11 +1,5 @@
-/* ====== СТАЛЬ КНОПОК ====== */
-var style = document.createElement('style');
-style.innerHTML = '.full-start__footer { position: relative; top: -30; }';
-document.head.appendChild(style);
-
-
-
 /* ===== ИКОНКИ =====*/
+
 function button() {
 Lampa.Listener.follow('full', function(e) {
   if (e.type == 'complite') {

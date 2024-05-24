@@ -5,6 +5,7 @@
 
 /* ====== Error: Script error ====== */
 (function() {
+
 var hideNoty=false;
 
 if (hideNoty) {

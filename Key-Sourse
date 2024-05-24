@@ -3,6 +3,18 @@
     Lampa.Platform.tv();
 
 
+/* ====== Error: Script error ====== */
+(function() {
+var hideNoty=false;
+
+if (hideNoty) {
+  Lampa.Noty.show("Error: Script error.");
+}
+
+})();
+
+
+
 /* ====== РАЗМЕР КНОПОК ====== */
 var style = document.createElement('style');
 style.innerHTML = '.full-start__footer { position: relative; top: -30; }';

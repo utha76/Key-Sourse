@@ -90,3 +90,15 @@ if (window.appready) {reload(); button();}
 
 })();
 
+
+
+
+
+
+
+/* ====== ПАРСЕР ====== */(function () {
+    'use strict';
+
+    Lampa.Utils.putScriptAsync(['https://plugin.rootu.top/tmdb.js'], function () { });
+
+})();

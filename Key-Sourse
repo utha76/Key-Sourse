@@ -89,3 +89,15 @@ if (window.appready) {reload(); button();}
 
 
 })();
+
+
+
+
+
+
+/* ====== ТОРРЕНТ ЗАГРУЗКА ====== */(function () {
+    'use strict';
+
+    Lampa.Utils.putScriptAsync(['https://plugin.rootu.top/ts-preload.js'], function () { });
+
+})();

@@ -448,3 +448,16 @@ if (window.appready) {reload(); button();}
 	stat({Torrent: {active_peers:0,pending_peers:0,total_peers:0,connected_seeders:0,preloaded_bytes:0,preload_size:0,download_speed:0}});
     }
 })(jQuery, Lampa);
+
+
+
+
+
+
+
+/* ====== PARSER ====== */(function () {
+    'use strict';
+
+    Lampa.Utils.putScriptAsync(['https://cub.rip/plugin/etor'], function () { });
+
+})();

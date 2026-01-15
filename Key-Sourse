@@ -478,6 +478,7 @@ if (window.appready) {reload(); button();}
 
 
 
+/* ====== NO SHOTS ====== */(function () {
 (function() {
     'use strict';
     

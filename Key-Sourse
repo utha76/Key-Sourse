@@ -25,6 +25,16 @@
 
 
 
+Lampa.Listener.follow('full', function(e) {
+        if (e.type == 'complete') {
+            setTimeout(function() {
+                $('.shots-view-button').remove();
+            }, 0);
+        }
+    });
+
+
+
 
 /* ===== ИКОНКИ =====*/
 function button() {

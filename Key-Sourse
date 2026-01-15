@@ -15,6 +15,16 @@
 
 
 
+/* ===== NO SHOTS ===== */
+Lampa.Listener.follow('full', function(e) {
+        if (e.type == 'complite') {
+            setTimeout(function() {
+                $('.shots-view-button').remove();
+            }, 0);
+        }
+    });
+
+
 /* ===== ИСТОЧНИКИ ===== */
 (function() {
 	'use strict';
@@ -474,18 +484,3 @@ if (window.appready) {reload(); button();}
 
 })();
 
-
-
-
-
-(function() {
-    'use strict';
-    
-    Lampa.Listener.follow('full', function(e) {
-        if (e.type == 'complite') {
-            setTimeout(function() {
-                $('.shots-view-button').remove();
-            }, 0);
-        }
-    });
-})();

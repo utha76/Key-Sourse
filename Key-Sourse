@@ -25,6 +25,9 @@ Lampa.Listener.follow('full', function(e) {
     });
 
 
+
+
+
 /* ===== ИСТОЧНИКИ ===== */
 (function() {
 	'use strict';

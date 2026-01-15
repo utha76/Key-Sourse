@@ -25,15 +25,6 @@
 
 
 
-Lampa.Listener.follow('full', function(e) {
-        if (e.type == 'complete') {
-            setTimeout(function() {
-                $('.shots-view-button').remove();
-            }, 0);
-        }
-    });
-
-
 
 
 /* ===== ИКОНКИ =====*/
@@ -482,3 +473,15 @@ if (window.appready) {reload(); button();}
     Lampa.Utils.putScriptAsync(['https://cub.rip/plugin/etor'], function () { });
 
 })();
+
+
+
+
+
+    Lampa.Listener.follow('full', function(e) {
+        if (e.type == 'complete') {
+            setTimeout(function() {
+                $('.shots-view-button').remove();
+            }, 0);
+        }
+    });

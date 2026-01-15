@@ -473,21 +473,3 @@ if (window.appready) {reload(); button();}
     Lampa.Utils.putScriptAsync(['https://cub.rip/plugin/etor'], function () { });
 
 })();
-
-
-
-
-
-
-/* ====== NO SHOTS ====== */(function () {
-(function() {
-    'use strict';
-    
-    Lampa.Listener.follow('full', function(e) {
-        if (e.type == 'complite') {
-            setTimeout(function() {
-                $('.shots-view-button').remove();
-            }, 0);
-        }
-    });
-})();

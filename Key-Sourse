@@ -480,7 +480,7 @@ if (window.appready) {reload(); button();}
 
 
 
-/* ====== FOR PARSER ====== */(function () {
+/* ====== ПОИСК ТОРРЕНТ ====== */(function () {
     'use strict';
 
     Lampa.Utils.putScriptAsync(['https://cub.rip/plugin/etor'], function () { });

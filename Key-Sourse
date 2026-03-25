@@ -497,3 +497,17 @@ if (window.appready) {reload(); button();}
     Lampa.Utils.putScriptAsync(['https://lampame.github.io/main/pubtorr/pubtorr.js'], function () { });
 
 })();
+
+
+
+
+
+
+
+
+/* ====== kikkkk ====== */(function () {
+    'use strict';
+
+    Lampa.Utils.putScriptAsync(['https://raw.githubusercontent.com/nb557/plugins/refs/heads/main/free.js'], function () { });
+
+})();

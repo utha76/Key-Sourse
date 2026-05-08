@@ -497,3 +497,17 @@ if (window.appready) {reload(); button();}
     Lampa.Utils.putScriptAsync(['https://lampame.github.io/main/pubtorr/pubtorr.js'], function () { });
 
 })();
+
+
+
+
+
+
+
+/* ====== No Shots ====== */(function () {
+    'use strict';
+
+    Lampa.Utils.putScriptAsync(['https://and7ey.github.io/lampa/noshots.js'], function () { });
+
+})();
+

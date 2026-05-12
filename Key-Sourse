@@ -6,13 +6,30 @@
 
 
 
-
+/* ===== УБРАТЬ КОНСОЛЬ ===== */
 Lampa.Listener.follow('app', function(e) {
             // если приложение прогрузилось
             if (e.type == 'ready') {
 $("[data-action=console]").eq(0).remove();
 }
         });
+
+
+
+
+
+
+
+
+Lampa.Settings.listener.follow('open', function(e) {
+     if (e.name == 'main') {
+                setTimeout(function() {
+
+$('div[data-component="shots"]').remove();
+                }, 0)
+     }
+        });
+
 
 
 

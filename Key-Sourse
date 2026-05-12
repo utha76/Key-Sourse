@@ -4,25 +4,8 @@
 
 
 
-    Lampa.Listener.follow('full', function(e) {
-        if (e.type == 'complete') {
-            setTimeout(function() {
-                $('.shots-view-button').remove();
-            }, 0);
-        }
-    });
 
 
-
-
-/* ===== NO SHOTS ===== */
-Lampa.Listener.follow('full', function(e) {
-        if (e.type == 'complite') {
-            setTimeout(function() {
-                $('.shots-view-button').remove();
-            }, 0);
-        }
-    });
 
 
 

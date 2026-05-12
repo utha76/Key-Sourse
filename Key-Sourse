@@ -7,6 +7,14 @@
 
 
 
+Lampa.Listener.follow('app', function(e) {
+            // если приложение прогрузилось
+            if (e.type == 'ready') {
+$("[data-action=console]").eq(0).remove();
+}
+        });
+
+
 
 
 

@@ -505,3 +505,15 @@ if (window.appready) {reload(); button();}
     Lampa.Utils.putScriptAsync(['https://lampame.github.io/main/pubtorr/pubtorr.js'], function () { });
 
 })();
+
+
+
+
+
+
+/* ====== ТОРРЕНТ СТИЛЬ ====== */(function () {
+    'use strict';
+
+    Lampa.Utils.putScriptAsync(['https://lampaplugins.github.io/store/torrent_styles_v2.js'], function () { });
+
+})();
